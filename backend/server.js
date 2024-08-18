@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from 'dotenv';
+import cors from 'cors';
 import userRoutes from './routes/user.route.js';
 import authRoutes from './routes/auth.route.js';
 
@@ -11,6 +12,11 @@ dotenv.config();
 // allow json as a input to the backend
 // body parser
 app.use(express.json());
+
+// cors
+app.use(cors({
+    origin: 'http://localhost:3000'
+}));
 
 // mongodb connection
 const connectTODB = async () => {
