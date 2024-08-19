@@ -26,7 +26,7 @@ const Signup = () => {
     if (formData.password !== formData.confirmPassword) {
       return setErrorMessage('Passwords not match');
     }
-    setErrorMessage('');
+
     try {
       setLoading(true);
       // clear the previous err msg
@@ -37,12 +37,8 @@ const Signup = () => {
         body: JSON.stringify(formData),
       });
       const data = await res.json();
-      console.log('res', res);
-      console.log('res.ok1', res.ok);
       // setLoading(false);
-      console.log('res.ok2', res.ok);
       if (res.ok) {
-        console.log('res.ok block executed');
         navigate('/signin');
       }
 
