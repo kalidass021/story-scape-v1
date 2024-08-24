@@ -129,7 +129,7 @@ const Signup = () => {
           <div className='flex gap-2 text-sm mt-5'>
             <span>Have an account?</span>
             <Link to='/signin' className='text-blue-500'>
-              Sign In
+              Sign in
             </Link>
           </div>
           {/* form validation error message */}
