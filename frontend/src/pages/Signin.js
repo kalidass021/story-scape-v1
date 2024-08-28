@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 // step5: using redux state and actions in components
 import { useDispatch, useSelector } from 'react-redux';
 import { signInStart, signInSuccess, signInFailure } from '../redux/user/userSlice';
+import OAuth from '../components/OAuth';
 
 const Signin = () => {
   const [formData, setFormData] = useState({});
@@ -105,6 +106,7 @@ const Signin = () => {
                 'Sign in'
               )}
             </Button>
+            <OAuth />
           </form>
           <div className='flex gap-2 text-sm mt-5'>
             <span>Don't have an account?</span>

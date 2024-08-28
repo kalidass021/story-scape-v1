@@ -21,3 +21,14 @@ Content-Type: application/json
     "email": "user2@gmail.com",
     "password": "user123"
 }
+
+###
+
+POST http://localhost:5000/api/auth/google
+Content-Type: application/json
+
+{
+    "name": "Kalidass Boopathi",
+    "email": "kalidass@gmail.com",
+    "googlePhotoUrl": "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+}
