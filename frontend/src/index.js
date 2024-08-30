@@ -10,6 +10,7 @@ import Signin from './pages/Signin';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
 import Projects from './pages/Projects';
+import PrivateRoute from './components/PrivateRoute';
 
 const appRouter = createBrowserRouter([
   {
@@ -31,6 +32,15 @@ const appRouter = createBrowserRouter([
       {
         path: '/signup',
         element: <Signup />,
+      },
+      {
+        element: <PrivateRoute />,
+        children: [
+          {
+            path: '/dashboard',
+            element: <Dashboard />,
+          },
+        ]
       },
       {
         path: '/dashboard',
