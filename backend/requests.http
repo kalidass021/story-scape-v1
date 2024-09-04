@@ -32,3 +32,14 @@ Content-Type: application/json
     "email": "kalidass@gmail.com",
     "googlePhotoUrl": "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
 }
+
+
+###
+
+PUT http://localhost:5000/api/user/update/66bf91a7bfcee29fb12d3158
+Content-Type: application/json
+
+{
+    "username": "user 21dfasdf",
+    "password": "12345"
+}

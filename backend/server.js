@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from 'dotenv';
 import cors from 'cors';
+import cookieParser from "cookie-parser";
 import userRoutes from './routes/user.route.js';
 import authRoutes from './routes/auth.route.js';
 
@@ -17,6 +18,9 @@ app.use(express.json());
 app.use(cors({
     origin: 'http://localhost:3000'
 }));
+
+// extracting cookies from the browser
+app.use(cookieParser());
 
 // mongodb connection
 const connectTODB = async () => {
